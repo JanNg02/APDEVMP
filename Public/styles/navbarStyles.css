@@ -9,19 +9,21 @@
   width: 50px; 
 }
 
-.bar .logoDiv {
+ .logoDiv {
   width: 10%; 
   align-items: center;
+  
 }
 
-.bar .buttonDiv {
+ .buttonDiv {
   width: 90%; 
+  margin-top: 5px
 }
 
 .buttonDiv button {
 	float: left;
 	display: block;
-	background-color: rgba(14, 110, 188, 0.863);
+	background-color: transparent;
 	color: white;
 	text-align: center;
 	padding: 15px 25px;
@@ -29,6 +31,7 @@
 	border: none; 
   width: 15%;
   height: 50px; 
+  
   }
 
 .bar img {
