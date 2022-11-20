@@ -83,6 +83,7 @@ const addEnrty = {
             category:"antihistamine",
             price: 900,
             stock: 10,
+            description: "description", 
             pic: "allergyease.jpg"
         };
         Product.create(newProduct, err => {
