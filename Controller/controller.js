@@ -25,6 +25,10 @@ const controller = {
 		res.render('adminAdd'); 
 	}, 
 
+	generateRemoveAdmin: function (req,res){
+		res.render('adminRemove'); 
+	}, 
+
 	addItems: async function(req,res) {
 		let productName = req.body.productName; 
 		let productPrice = req.body.price;
@@ -48,8 +52,13 @@ const controller = {
 			   }
 		   }
 		); 
+   },
+   
+   deleteItems: async function(req,res) { 
 
-   }
+	
+	
+   },
 }
 
 module.exports = controller;
