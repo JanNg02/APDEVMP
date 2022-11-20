@@ -3,36 +3,37 @@
 <head>
 <title>Home Page</title>
 <link rel="stylesheet" type="text/css" media="all" href="styles/home.css">
-
 <link rel="stylesheet" type="text/css" media="all" href="styles/navbarStyles.css">
 <link rel="stylesheet" type="text/css" media="all" href="styles/footerStyles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type = "text/javascript" src="js/indexScript.js"></script> 
+    </head>
+    <body>
 
-</head>
-<body>
 
     <!--Navigation Bar--> 
     <%- include('./staples/navbar.ejs') %>
 
-<!--Home Page--> 
-<div class="home-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/home.jpg');">
-  <div class="home-text">
-    <h1 style="font-size:50px">Welcome to Chubbies!</h1>
-    <p>and thank you for visiting our website! </p>
-    <p>We appreciate that you are curious about our company 
-        and look forward to meeting you in our store in the near future.</p>
-    
-    <!--For Login Form to appear--> 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Start Now!</button>
-  </div>
-</div>
+        <!--Home Page--> 
+        <div class="home-image" >
+        <div class="home-text">
+            <h1><%= title %></h1>
+            <p>and thank you for visiting our website! </p>
+            <p>We appreciate that you are curious about our company 
+                and look forward to meeting you in our store in the near future.</p>
+            
+            <!--For Login Form to appear--> 
+            <button id="bmodal" >Start Now!</button>
+        </div>
+        </div>
 
-<!--Login Form--> 
-<div id="id01" class="login">
-	<form class="login-content" action="shop.html" id="loginForm">
-    <div class="imgcontainer">
-		  <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
-		  <img src="images/icon.jpg" alt="Avatar" class="avatar">
-    </div>
+        <!--Login Form--> 
+        <div id="id01" class="login">
+            <form class="login-content" action="/login" id="loginForm">
+            <div class="imgcontainer">
+                <span  id="bmodal2" class="close">&times;</span>
+                <img src="images/icon.jpg" alt="Avatar" class="avatar">
+            </div>
 
     <div class="container">
 		  <label for="username"><b>Username</b></label>
@@ -49,112 +50,57 @@
   </form>
 </div>
 
-<!--Products Preview-->
-<div class="products-section">
-  <h1>Sample Products</h1>
-  <div class="products-container">
-    <div class="products">
-      <div class="noprod">1 / 5</div>
-      <img src="images/allergyease.jpg" style="width:73%" alt="product1">
-      <div class="caption">Allergyease: $900/bottle</div>
-    </div>
-  
-    <div class="products">
-      <div class="noprod">2 / 5</div>
-      <img src="images/catMed.png" style="width:100%" alt="product2">
-      <div class="caption">catMed: $133.99/box</div>
-    </div>
-  
-    <div class="products">
-      <div class="noprod">3 / 5</div>
-      <img src="images/heartgard.jpg" style="width:70%" alt="product3">
-      <div class="caption">Heartgard: $67.99/box</div>
-    </div>
+        <!--Products Preview-->
+        <div class="products-section">
+        <h1>Sample Products</h1>
+        <div class="products-container">
+            <div class="products">
+            <div class="noprod">1 / 5</div>
+            <img src="images/allergyease.jpg" alt="product1">
+            <div class="caption">Allergyease: $900/bottle</div>
+            </div>
+        
+            <div class="products">
+            <div class="noprod">2 / 5</div>
+            <img src="images/catMed.png"  alt="product2">
+            <div class="caption">catMed: $133.99/box</div>
+            </div>
+        
+            <div class="products">
+            <div class="noprod">3 / 5</div>
+            <img src="images/heartgard.png"  alt="product3">
+            <div class="caption">Heartgard: $67.99/box</div>
+            </div>
 
-    <div class="products">
-      <div class="noprod">4 / 5</div>
-      <img src="images/nexgard.png" style="width:100%" alt="product4">
-      <div class="caption">Nexgard: $72.99/box</div>
-    </div>
+            <div class="products">
+            <div class="noprod">4 / 5</div>
+            <img src="images/nexgard.png" alt="product4">
+            <div class="caption">Nexgard: $72.99/box</div>
+            </div>
 
-    <div class="products">
-      <div class="noprod">5 / 5</div>
-      <img src="images/simparica.jpg" style="width:100%" alt="product5">
-      <div class="caption">Simparica: $168.41/box</div>
-    </div>
+            <div class="products">
+            <div class="noprod">5 / 5</div>
+            <img src="images/simparica.png" alt="product5">
+            <div class="caption">Simparica: $168.41/box</div>
+            </div>
+            
+            <a id="prev" class="prev" >❮</a>
+            <a id="next" class="next" >❯</a>
+        
+        </div>
+        <br>
+        
+        <div>
+            <span class="indicator"></span> 
+            <span class="indicator"></span> 
+            <span class="indicator"></span> 
+            <span class="indicator"></span> 
+            <span class="indicator"></span> 
+        </div>
+        </div>
 
-    <a class="prev" onclick="nextProd(-1)">❮</a>
-    <a class="next" onclick="nextProd(1)">❯</a>
-  
-  </div>
-  <br>
-
-  <div>
-    <span class="indicator" onclick="show(1)"></span> 
-    <span class="indicator" onclick="show(2)"></span> 
-    <span class="indicator" onclick="show(3)"></span> 
-    <span class="indicator" onclick="show(4)"></span> 
-    <span class="indicator" onclick="show(5)"></span> 
-  </div>
-</div>
- 
     <!--Footer--> 
     <%- include('./staples/footer.ejs') %>
-
-
-<!--
-<script>
-  // JS for submission of login form
-  document.getElementById("loginForm").addEventListener("submit", ifValid); //triggers when submit button is clicked
-  
-  function ifValid() { //function that displays a message if the login credentials are valid
-    alert("Loading..... Please wait!!");
-  }
-
-  //JS for Product Preview
-  let x = 1; //indicates the product number
-  displayProd(x);
-
-  function nextProd(n) { //calls displayProd function to determine the next product to be displayed
-    displayProd(x += n);
-  }
-
-  function show(n) { //calls displayProd function to determine the product to be displayed
-    displayProd(x = n);
-  }
-
-  function displayProd(n) { //function that determines the product to be displayed
-    let i;
-    if (n > document.getElementsByClassName("products").length) { //first product
-      x = 1
-    }
-
-    if (n < 1) { //last product
-      x = document.getElementsByClassName("products").length
-    }
-
-    for (i = 0; i < document.getElementsByClassName("products").length; i++) { //all products should not be displayed yet
-      document.getElementsByClassName("products")[i].style.display = "none";  
-    }
-
-    for (i = 0; i < document.getElementsByClassName("indicator").length; i++) { //replaces active indicators to not active
-      document.getElementsByClassName("indicator")[i].className = document.getElementsByClassName("indicator")[i].className.replace(" active", "");
-    }
-
-    document.getElementsByClassName("products")[x-1].style.display = "block";  //displays the product
-    document.getElementsByClassName("indicator")[x-1].className += " active"; //displays which indicator is active
-  }
-
-	// Close login page when the user clicks anywhere outside of the login page.
-	var modal = document.getElementById('id01');
-  window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-</script> -->
-<script type = "text/javascript" src="js/indexScript.js"></script>
 
 </body>
 </html>
