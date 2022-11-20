@@ -5,7 +5,7 @@ body {
     background-color: #d5eef7fc;
 }
 
-/* Navigation Bar CSS */
+/* Navigation Bar CSS 
 .navbar {
     overflow: hidden;
     margin-top: 0%;
@@ -34,7 +34,7 @@ body {
     background-color: #ddd;
     color: black;
 }
-  
+  */
   /* Registration CSS */
   * {
     box-sizing: border-box;
@@ -44,8 +44,8 @@ body {
   .container {
     padding: 16px;
     background-color: white;
-      width:70%;
-      left:15%;
+      width:auto;
+      left:auto;
   }
   
 input[type=text], input[type=password], input[type=date]{
