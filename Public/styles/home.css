@@ -4,6 +4,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 /* Home page CSS*/
 .home-image {
@@ -12,7 +13,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Public/images/home.jpg");
     position: relative;
+    
 }
   
 .home-text {
@@ -22,6 +25,10 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+}
+
+.home-text h1{
+    font-size: 50px;
 }
   
 .home-text button {
@@ -33,6 +40,7 @@ body, html {
     background-color: #ddd;
     text-align: center;
     cursor: pointer;
+    width: auto;
 }
   
 .home-text button:hover {
@@ -58,6 +66,9 @@ body, html {
     margin: auto;
 }
   
+.products-container img{
+    width: 70%;
+}
 .prev {
     left: 0;
     cursor: pointer;
