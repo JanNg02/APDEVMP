@@ -35,7 +35,7 @@
 ### Instructions for Populating the Database
 Running the code for the first time will populate the database so to avoid duplicate entries, do the following:
 1. open index.js 
-2. comment out line 47 to 77  
+2. comment out line 47 to 70  
 
 ## SECTION 2: Modules to install (for step 5 of installation instructions)
 ### Base
