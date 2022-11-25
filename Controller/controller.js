@@ -345,7 +345,7 @@ const controller = {
 		
 		var name = req.body.name;
 		var address = req.body.address; 
-		var contact = req.body.contanct; 
+		var contact = req.body.contact; 
 		var userName = req.body.username; 
 		var pass = req.body.password;  
 
